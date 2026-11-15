@@ -4,6 +4,46 @@ Pengujian manual dan otomatis untuk dua aplikasi: **KINGSHANDs** (aplikasi web m
 
 **[Laporan test terbaru](https://rivaldimhr.github.io/qa-automation-portfolio/)** · **[Test plan](docs/test-plan.md)** · **[Test case](docs/test-cases.md)** · **[Laporan bug](docs/bug-reports.md)** · **[Catatan eksploratif](docs/exploratory-testing.md)**
 
+## Penjelasan sederhana
+
+**Apa itu QA?** Quality Assurance (QA) adalah pekerjaan memastikan sebuah aplikasi bekerja sesuai yang diharapkan sebelum dipakai orang banyak. Caranya dengan mencoba aplikasi secara sistematis, mencari kesalahan (bug), melaporkannya, lalu memastikan perbaikannya benar.
+
+**Apa yang saya uji?**
+
+- **King's Hand:** website untuk memantau proyek yang didanai. Penanggung jawab proyek mengajukan proposal dan melaporkan kemajuan; admin menyetujui proposal dan memeriksa laporan. Website juga memberi peringatan otomatis, misalnya kalau uang terpakai lebih cepat daripada pekerjaannya.
+- **Restful-Booker:** API pemesanan hotel. API adalah "jalur komunikasi" antaraplikasi, misalnya saat aplikasi travel mengirim data pemesanan ke sistem hotel. Restful-Booker memang dibuat untuk latihan pengujian.
+
+**Langkah yang saya lakukan:**
+
+1. **Membuat rencana pengujian:** apa yang diuji, bagaimana caranya, dan kapan pengujian dianggap selesai.
+2. **Mencoba aplikasi seperti pengguna sungguhan** untuk mencari kesalahan, termasuk skenario yang tidak biasa (misalnya salah ketik lalu ingin memperbaikinya).
+3. **Mencatat setiap kesalahan di Jira,** aplikasi pelacak pekerjaan yang dipakai tim software: langkah untuk mengulanginya, hasil yang seharusnya, tingkat keparahan, dan screenshot.
+4. **Memperbaiki kesalahan yang penting,** lalu membuat test otomatis supaya kesalahan yang sama tidak muncul lagi.
+5. **Membuat "robot penguji"** yang setiap hari otomatis mencoba 115 skenario dan menerbitkan laporannya.
+
+**Contoh kesalahan yang ditemukan (bahasa sederhana):**
+
+- Penanggung jawab salah mengetik progres 95% (seharusnya 70%). Admin sudah meminta revisi, tetapi aplikasi menolak koreksinya karena "progres tidak boleh turun". Data yang salah terkunci. *(Sudah diperbaiki.)*
+- Proyek yang menghabiskan uang 108% dari anggaran malah ditandai "Proyek ini aman". *(Sudah diperbaiki.)*
+- Di API hotel, status "belum bayar deposit" yang dikirim sebagai teks `"false"` tersimpan sebagai "sudah bayar". *(Dilaporkan; aplikasi pihak ketiga.)*
+
+**Hasilnya:** 14 kesalahan ditemukan. 4 yang paling serius sudah diperbaiki dan dijaga test otomatis; 10 sisanya tercatat di Jira dan tetap dipantau oleh test.
+
+**Istilah yang dipakai:**
+
+| Istilah | Artinya |
+|---|---|
+| Test case | Satu skenario uji: langkah yang dilakukan dan hasil yang diharapkan |
+| Bug | Kesalahan di aplikasi: hasil sebenarnya berbeda dari yang seharusnya |
+| Severity | Tingkat keparahan bug: High (alur utama rusak), Medium, Low (kecil) |
+| Pengujian eksploratif | Mencoba aplikasi secara bebas tapi terarah untuk menemukan kesalahan yang tidak terpikirkan sebelumnya |
+| Test otomatis | Program yang menjalankan skenario uji sendiri, tanpa diklik manual |
+| Test regresi | Test yang memastikan bug yang sudah diperbaiki tidak muncul lagi |
+| CI (Continuous Integration) | Server yang menjalankan semua test otomatis setiap ada perubahan dan setiap hari |
+| xfail | Test untuk bug yang belum diperbaiki: sengaja "gagal sesuai dugaan" sampai bugnya diperbaiki |
+| Playwright / Postman | Alat untuk menguji website (Playwright) dan API (Postman) secara otomatis |
+| Jira | Aplikasi untuk mencatat dan melacak pekerjaan dan bug dalam tim |
+
 ## Hasil singkat
 
 | | |

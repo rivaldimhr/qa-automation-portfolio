@@ -115,4 +115,4 @@ Tanda: 🔥 smoke · 🔁 regresi bug yang diperbaiki · ⚠️ bug terbuka (xfa
 
 ## Koleksi Postman
 
-Folder **1. Smoke** (9 request) menjalankan alur lengkap: ping → login → buat → baca → cari → PUT → PATCH → hapus → baca (404). Token dan bookingid diteruskan lewat collection variable. Folder **2. Negative** (5 request) berisi kredensial salah, tanpa login, token palsu, data tidak lengkap, dan Accept tidak didukung. Total 39 asersi, termasuk validasi JSON schema dan waktu respons < 2 detik.
+Folder **1. Smoke** (9 request) menjalankan alur lengkap: ping → login → buat → baca → cari → PUT → PATCH → hapus → baca (404). Token dan bookingid diteruskan lewat collection variable. Folder **2. Negative** (5 request) berisi kredensial salah, tanpa login, token palsu, data tidak lengkap, dan Accept tidak didukung. Total 39 asersi, termasuk validasi JSON schema dan waktu respons < 3 detik.

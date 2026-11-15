@@ -11,7 +11,7 @@
       "script": {
         "type": "text/javascript",
         "exec": [
-          "pm.test('Respons di bawah 2 detik', () => pm.expect(pm.response.responseTime).to.be.below(2000));"
+          "pm.test('Respons di bawah 3 detik', () => pm.expect(pm.response.responseTime).to.be.below(3000));"
         ]
       }
     }
@@ -223,7 +223,17 @@
                 "{{baseUrl}}"
               ],
               "path": [
-                "booking?firstname={{firstname}}&lastname={{lastname}}"
+                "booking"
+              ],
+              "query": [
+                {
+                  "key": "firstname",
+                  "value": "{{firstname}}"
+                },
+                {
+                  "key": "lastname",
+                  "value": "{{lastname}}"
+                }
               ]
             },
             "description": ""

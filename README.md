@@ -21,6 +21,10 @@ Sprint berisi 2 epic, 10 story (dengan kriteria penerimaan dan ID test case), 5 
 
 ![Board Jira](docs/img/jira-board.png)
 
+Backlog sprint dengan sprint goal:
+
+![Backlog sprint](docs/img/jira-backlog.png)
+
 Contoh tiket bug (BUG-01 / SCRUM-23): severity, lingkungan, langkah reproduksi, hasil sebenarnya dan yang diharapkan, akar masalah, perbaikan, dan test yang memverifikasinya.
 
 ![Tiket BUG-01 di Jira](docs/img/jira-bug-01.png)

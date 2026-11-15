@@ -59,7 +59,7 @@ def main():
 <style>body{{font:16px/1.5 system-ui,sans-serif;max-width:960px;margin:40px auto;padding:0 20px;color:#1d2433}}
 table{{border-collapse:collapse;width:100%;margin:12px 0 32px}}td,th{{padding:8px 10px;border-bottom:1px solid #e3e6ec;text-align:left}}
 th{{font-size:13px;color:#5b6475}}tr.gagal td:last-child{{color:#b42318;font-weight:600}}tr.lulus td:last-child{{color:#067647;font-weight:600}}
-a{{color:#1849a9}}small{{color:#5b6475}}</style>
+td:first-child,td:nth-child(2){{white-space:nowrap}}a{{color:#1849a9}}small{{color:#5b6475}}</style>
 <h1>Laporan QA</h1><small>Dibuat {stamp}. Xfail = test untuk bug yang masih terbuka; gagal sesuai dugaan.</small>
 <h2>Hasil test</h2><table><tr><th>Suite</th><th>Total</th><th>Lulus</th><th>Xfail (bug terbuka)</th><th>Gagal</th><th>Status</th></tr>{''.join(rows)}</table>
 <h2>Bug</h2><table><tr><th>ID</th><th>Jira</th><th>Aplikasi</th><th>Ringkasan</th><th>Status</th></tr>{bugs}</table>

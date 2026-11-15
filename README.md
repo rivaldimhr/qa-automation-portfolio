@@ -41,6 +41,14 @@ Contoh nyata dari alur ini, **BUG-01 (High)**: saat pengujian eksploratif, penan
 
 ![BUG-01: koreksi ditolak](docs/img/bugs/bug-progress-cannot-be-corrected.png)
 
+## Postman
+
+Koleksi yang sama juga tersedia di workspace Postman dengan dua environment (publik dan lokal), dan bisa dijalankan dengan Collection Runner.
+
+![Hasil Collection Runner di Postman](docs/img/postman-run.png)
+
+Run di atas dijalankan ke server publik `restful-booker.herokuapp.com`: 39 asersi, 33 lulus dan 6 gagal. Keenam kegagalan itu satu akar masalah, dan ditelusuri dari request **Login admin**: status 200 tetapi tanpa token. Variabel `password` di environment dibuat bertipe *secret* lewat API, dan nilainya tidak tersinkron ke aplikasi, sehingga yang terkirim kosong. Lima kegagalan lain (ubah, hapus, baca setelah dihapus) adalah efek berantai karena butuh token. Variabelnya sudah diubah ke tipe biasa (kredensial demo yang memang publik). Di CI, koleksi yang sama lulus 39/39 terhadap server lokal.
+
 ## Bug terbuka tetap diuji
 
 Bug yang belum diperbaiki ditulis sebagai test dengan perilaku yang **benar**, lalu ditandai `xfail` strict:

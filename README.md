@@ -15,6 +15,12 @@ Pengujian manual dan otomatis untuk dua aplikasi: **KINGSHANDs** (aplikasi web m
 | Pelacakan | Jira: 2 epic, 10 story, 5 task, 14 bug dalam satu sprint. Board Jira bersifat privat; isi setiap tiket juga ada di [laporan bug](docs/bug-reports.md) dan [test case](docs/test-cases.md) |
 | CI | GitHub Actions setiap push dan setiap hari pukul 06.00 WIB |
 
+## Jira
+
+Sprint berisi 2 epic, 10 story (dengan kriteria penerimaan dan ID test case), 5 task, dan 14 bug. Bug yang sudah diperbaiki dan semua story/task ada di Done; 10 bug terbuka ada di To Do. Setiap bug terhubung ke story yang terdampak.
+
+![Board Jira](docs/img/jira-board.png)
+
 ## Alur kerja QA
 
 ```

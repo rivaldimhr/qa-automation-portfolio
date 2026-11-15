@@ -1,0 +1,101 @@
+# Setiap push / pull request, dan setiap hari pukul 06.00 WIB:
+#   1. UI   : KINGSHANDs (versi terbaru dari repo-nya) diuji dengan Playwright + pytest
+#   2. API  : Restful-Booker dijalankan lokal (versi dikunci), diuji dengan pytest + requests
+#   3. API  : koleksi Postman dijalankan dengan Newman
+#   4. Laporan HTML ketiganya dipublikasikan ke branch gh-pages
+name: QA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  RESTFUL_BOOKER_SHA: 619d03162c050baae7d22fdcf983a22f9da6faed
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ambil aplikasi yang diuji (KINGSHANDs)
+        uses: actions/checkout@v4
+        with:
+          repository: rivaldimhr/KINGSHANDs
+          path: sut/KINGSHANDs
+
+      - name: Ambil Restful-Booker
+        uses: actions/checkout@v4
+        with:
+          repository: mwinteringham/restful-booker
+          ref: ${{ env.RESTFUL_BOOKER_SHA }}
+          path: sut/restful-booker
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Pasang dependensi
+        run: |
+          pip install -q -r requirements.txt
+          python -m playwright install --with-deps chromium >/dev/null
+          npm install -g --silent newman newman-reporter-htmlextra
+          (cd sut/restful-booker && npm ci --silent)
+
+      - name: Jalankan Restful-Booker
+        run: |
+          (cd sut/restful-booker && nohup npm start > ../restful-booker.log 2>&1 &)
+          for i in $(seq 1 30); do curl -sf -o /dev/null http://localhost:3001/ping -w '' && break || sleep 1; done
+          curl -s -o /dev/null -w "ping: %{http_code}\n" http://localhost:3001/ping
+
+      - name: Test UI (KINGSHANDs)
+        id: ui
+        if: always()
+        env:
+          KH_DIR: sut/KINGSHANDs/web
+        run: python -m pytest ui -v --html=reports/ui/index.html --self-contained-html --junitxml=reports/ui/junit.xml
+
+      - name: Test API (pytest)
+        id: api
+        if: always()
+        run: python -m pytest api -v --html=reports/api/index.html --self-contained-html --junitxml=reports/api/junit.xml
+
+      - name: Test API (Postman / Newman)
+        id: newman
+        if: always()
+        run: |
+          newman run postman/restful-booker.postman_collection.json -e postman/local.postman_environment.json \
+            -r cli,junit,htmlextra \
+            --reporter-junit-export reports/newman/junit.xml \
+            --reporter-htmlextra-export reports/newman/index.html \
+            --reporter-htmlextra-title "Restful-Booker: Newman"
+
+      - name: Susun halaman ringkasan laporan
+        if: always()
+        run: |
+          cp sut/restful-booker.log reports/ 2>/dev/null || true
+          python scripts/build_report_index.py reports
+
+      - name: Publikasikan laporan ke gh-pages
+        if: always() && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reports
+          force_orphan: true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qa-reports
+          path: reports

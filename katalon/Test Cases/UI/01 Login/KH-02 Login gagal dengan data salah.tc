@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-8. Teknik: EP, negative. Data-driven dari Data Files/KINGSHANDs/login_gagal: setiap baris harus ditolak dan aplikasi tidak terbuka.</description>
+   <name>KH-02 Login gagal dengan data salah</name>
+   <tag>login, negative, data-driven</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0854bcf1-1c10-50e8-87ce-e44dfb523d22</testCaseGuid>
+</TestCaseEntity>

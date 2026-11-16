@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebServiceRequestEntity>
+   <description>Hapus booking. Butuh token (cookie) atau Basic auth.</description>
+   <name>DELETE_Booking</name>
+   <tag></tag>
+   <elementGuidId>eaf5991a-f4f4-5b9d-8771-e8448a6eb530</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
+   <connectionTimeout>-1</connectionTimeout>
+   <followRedirects>false</followRedirects>
+   <httpBody></httpBody>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Accept</name>
+      <type>Main</type>
+      <value>application/json</value>
+      <webElementGuid>958f4e2b-73fa-5ccd-aae4-a6cedf0bc897</webElementGuid>
+   </httpHeaderProperties>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Cookie</name>
+      <type>Main</type>
+      <value>token=${token}</value>
+      <webElementGuid>9f8bfa7d-d706-545e-b0e3-f4a02648e122</webElementGuid>
+   </httpHeaderProperties>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Authorization</name>
+      <type>Main</type>
+      <value>${authorization}</value>
+      <webElementGuid>3357f5be-2f88-5ef1-8983-02e8f7771dbb</webElementGuid>
+   </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
+   <migratedVersion>5.4.1</migratedVersion>
+   <restRequestMethod>DELETE</restRequestMethod>
+   <restUrl>${baseUrl}/booking/${id}</restUrl>
+   <serviceType>RESTful</serviceType>
+   <soapBody></soapBody>
+   <soapHeader></soapHeader>
+   <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
+   <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>GlobalVariable.RB_URL</defaultValue>
+      <description>Alamat Restful-Booker (dari profil)</description>
+      <id>81660493-2656-5baa-b3dc-d18baeb48cc8</id>
+      <masked>false</masked>
+      <name>baseUrl</name>
+   </variables>
+   <variables>
+      <defaultValue>'1'</defaultValue>
+      <description>bookingid</description>
+      <id>957b9acd-c343-5706-bf13-e3fb38deb133</id>
+      <masked>false</masked>
+      <name>id</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>Token dari POST /auth; kosong = tanpa cookie token</description>
+      <id>0c1e074f-8057-5018-9ff7-bc6e10121d98</id>
+      <masked>false</masked>
+      <name>token</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>Header Authorization, misalnya Basic YWRtaW46cGFzc3dvcmQxMjM=; kosong = tanpa Basic auth</description>
+      <id>c39931dd-fd81-5430-87b3-5e18a5ee6383</id>
+      <masked>false</masked>
+      <name>authorization</name>
+   </variables>
+   <wsdlAddress></wsdlAddress>
+</WebServiceRequestEntity>

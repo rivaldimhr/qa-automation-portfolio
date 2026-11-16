@@ -1,0 +1,6 @@
+email,password,keterangan
+demo@kingshand.id,salah,kata sandi salah
+tidakada@kingshand.id,demo123,email tidak terdaftar
+,,email dan kata sandi kosong
+demo@kingshand.id,DEMO123,kata sandi peka huruf besar
+admin@kingshand.id,demo123,kata sandi akun lain

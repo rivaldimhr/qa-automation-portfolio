@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-16. Teknik: negative. GET /booking/99999999 menjawab 404.</description>
+   <name>RB-14 Booking yang tidak ada</name>
+   <tag>api, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c5b24bec-7de1-5fed-8b8c-7ef762cc87b8</testCaseGuid>
+</TestCaseEntity>

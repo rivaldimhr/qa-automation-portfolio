@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description>Versi online: KINGSHANDs di GitHub Pages dan Restful-Booker publik.</description>
+   <name>default</name>
+   <tag></tag>
+   <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description>Alamat KINGSHANDs</description>
+      <initValue>'https://rivaldimhr.github.io/kingshand/'</initValue>
+      <name>BASE_URL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Alamat Restful-Booker</description>
+      <initValue>'https://restful-booker.herokuapp.com'</initValue>
+      <name>RB_URL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Akun demo penanggung jawab</description>
+      <initValue>'demo@kingshand.id'</initValue>
+      <name>PJ_EMAIL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Kata sandi demo penanggung jawab (publik, tertulis di halaman login)</description>
+      <initValue>'demo123'</initValue>
+      <name>PJ_PASSWORD</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Akun demo admin lembaga</description>
+      <initValue>'admin@kingshand.id'</initValue>
+      <name>ADMIN_EMAIL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Kata sandi demo admin (publik, tertulis di halaman login)</description>
+      <initValue>'admin123'</initValue>
+      <name>ADMIN_PASSWORD</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>User Restful-Booker (didokumentasikan publik)</description>
+      <initValue>'admin'</initValue>
+      <name>RB_USER</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Kata sandi Restful-Booker (didokumentasikan publik)</description>
+      <initValue>'password123'</initValue>
+      <name>RB_PASSWORD</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Batas tunggu elemen (detik)</description>
+      <initValue>10</initValue>
+      <name>TIMEOUT</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

@@ -1,8 +1,8 @@
 # QA Automation Portfolio
 
-Pengujian manual dan otomatis untuk dua aplikasi: **KINGSHANDs** (aplikasi web monitoring proyek pendanaan, UI) dan **Restful-Booker** (REST API latihan). Lengkap dari test plan, pengujian eksploratif, laporan bug di Jira, perbaikan, sampai test regresi yang berjalan di CI.
+Pengujian manual dan otomatis untuk dua aplikasi: **KINGSHANDs** (aplikasi web monitoring proyek pendanaan, UI) dan **Restful-Booker** (REST API latihan). Lengkap dari test plan, pengujian eksploratif, laporan bug di Jira, perbaikan, sampai test regresi yang berjalan di CI. Otomasinya dibuat dengan dua alat: **Playwright + pytest** (dan Postman) serta **[Katalon Studio](katalon/)**.
 
-**[Laporan test terbaru](https://rivaldimhr.github.io/qa-automation-portfolio/)** · **[Test plan](docs/test-plan.md)** · **[Test case](docs/test-cases.md)** · **[Laporan bug](docs/bug-reports.md)** · **[Catatan eksploratif](docs/exploratory-testing.md)**
+**[Laporan test terbaru](https://rivaldimhr.github.io/qa-automation-portfolio/)** · **[Test plan](docs/test-plan.md)** · **[Test case](docs/test-cases.md)** · **[Laporan bug](docs/bug-reports.md)** · **[Catatan eksploratif](docs/exploratory-testing.md)** · **[Project Katalon](katalon/)**
 
 ## Penjelasan sederhana
 
@@ -42,6 +42,7 @@ Pengujian manual dan otomatis untuk dua aplikasi: **KINGSHANDs** (aplikasi web m
 | CI (Continuous Integration) | Server yang menjalankan semua test otomatis setiap ada perubahan dan setiap hari |
 | xfail | Test untuk bug yang belum diperbaiki: sengaja "gagal sesuai dugaan" sampai bugnya diperbaiki |
 | Playwright / Postman | Alat untuk menguji website (Playwright) dan API (Postman) secara otomatis |
+| Katalon Studio | Alat otomasi test untuk website dan API; test disusun dari objek elemen, keyword, dan test suite |
 | Jira | Aplikasi untuk mencatat dan melacak pekerjaan dan bug dalam tim |
 
 ## Hasil singkat
@@ -53,7 +54,8 @@ Pengujian manual dan otomatis untuk dua aplikasi: **KINGSHANDs** (aplikasi web m
 | Bug diperbaiki | 4 bug KINGSHANDs (1 High, 3 Medium), masing-masing dengan test regresi yang dibuktikan gagal di versi lama |
 | Bug terbuka | 10, masing-masing tercatat di Jira dan punya test `xfail` |
 | Pelacakan | Jira: 2 epic, 10 story, 5 task, 14 bug dalam satu sprint. Board Jira bersifat privat; isi setiap tiket juga ada di [laporan bug](docs/bug-reports.md) dan [test case](docs/test-cases.md) |
-| CI | GitHub Actions setiap push dan setiap hari pukul 06.00 WIB |
+| Katalon Studio | 42 test case (28 Web UI, 14 API) dengan ID yang sama: Object Repository, Custom Keywords, data-driven CSV, Profiles, Test Suite Collection. Lihat [katalon/](katalon/) |
+| CI | GitHub Actions setiap push dan setiap hari pukul 06.00 WIB; project Katalon lewat Katalon Runtime Engine |
 
 ## Jira
 
@@ -89,6 +91,20 @@ Koleksi yang sama juga tersedia di workspace Postman dengan dua environment (pub
 
 Run di atas dijalankan ke server publik `restful-booker.herokuapp.com`: 39 asersi, 33 lulus dan 6 gagal. Keenam kegagalan itu satu akar masalah, dan ditelusuri dari request **Login admin**: status 200 tetapi tanpa token. Variabel `password` di environment dibuat bertipe *secret* lewat API, dan nilainya tidak tersinkron ke aplikasi, sehingga yang terkirim kosong. Lima kegagalan lain (ubah, hapus, baca setelah dihapus) adalah efek berantai karena butuh token. Variabelnya sudah diubah ke tipe biasa (kredensial demo yang memang publik). Di CI, koleksi yang sama lulus 39/39 terhadap server lokal.
 
+## Katalon Studio
+
+Skenario yang sama juga dibuat sebagai project Katalon Studio di folder [`katalon/`](katalon/): 28 test case Web UI untuk KINGSHANDs dan 14 test case API untuk Restful-Booker, dengan ID yang sama dengan [daftar test case](docs/test-cases.md). Buka folder itu lewat **File → Open Project** di Katalon Studio, pilih profil `default` (versi online), lalu jalankan suite `Regression Lengkap`.
+
+```groovy
+CustomKeywords.'kingshand.KH.openApp'()
+CustomKeywords.'kingshand.KH.loginAs'('pj')
+CustomKeywords.'kingshand.KH.openProject'(KhData.CAFE)
+CustomKeywords.'kingshand.KH.sendReport'('progres', 70, 'progres-benar.pdf')
+CustomKeywords.'kingshand.KH.verifyText'(findTestObject('KINGSHANDs/Detail/txt_Progres'), '70%')
+```
+
+Isinya: Object Repository berparameter (61 objek web, 8 objek web service), custom keyword untuk UI dan API, data-driven test dari CSV, dua profil lingkungan, test listener (screenshot saat gagal), serta suite smoke, regresi, dan `Known Bugs`. Penjelasan lengkap ada di [README Katalon](katalon/README.md).
+
 ## Bug terbuka tetap diuji
 
 Bug yang belum diperbaiki ditulis sebagai test dengan perilaku yang **benar**, lalu ditandai `xfail` strict:
@@ -116,9 +132,10 @@ api/
   data.py           pembuat data booking dan JSON schema
   tests/            24 test case API (pytest + requests + jsonschema)
 postman/            koleksi Postman + environment lokal dan publik
+katalon/            project Katalon Studio: Object Repository, Keywords, Test Cases, Test Suites, Profiles
 docs/               test plan, test case, laporan bug, catatan eksploratif, screenshot bukti
 bugs.py             daftar bug + penanda known_bug / regression_for
-scripts/            halaman ringkasan laporan
+scripts/            halaman ringkasan laporan, menjalankan Katalon Runtime Engine
 .github/workflows/  pipeline QA
 ```
 
@@ -153,4 +170,5 @@ Koleksi Postman bisa juga diimpor langsung ke aplikasi Postman (Import → pilih
 - **UI:** Playwright, pytest, Page Object Model, parametrisasi data, screenshot otomatis saat gagal, pemeriksaan error JavaScript di setiap test, uji tampilan ponsel.
 - **API:** requests, validasi JSON schema, autentikasi token (cookie) dan Basic auth, header Accept, Postman (variabel koleksi, test script, environment) dan Newman.
 - **Proses:** Jira (epic, story dengan kriteria penerimaan, task, bug dengan severity, sprint), laporan bug dengan langkah reproduksi dan bukti, test regresi untuk setiap perbaikan.
+- **Katalon Studio:** Web UI dan Web Service testing, Object Repository berparameter, Custom Keywords (Groovy), data-driven test (Data Files), Profiles, Test Listener, Test Suite Collection, Katalon Runtime Engine.
 - **CI:** GitHub Actions, Restful-Booker dijalankan dari versi yang dikunci, laporan pytest-html dan Newman htmlextra dipublikasikan ke GitHub Pages.

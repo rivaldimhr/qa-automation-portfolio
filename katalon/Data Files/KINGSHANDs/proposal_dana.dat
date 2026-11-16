@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description>Batas kebutuhan dana proposal (KH-12).</description>
+   <name>proposal_dana</name>
+   <tag></tag>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator>,</csvSeperator>
+   <dataFile>c7f46f09-a544-5557-b796-9b3f633bc99a</dataFile>
+   <dataSourceUrl>Include/data/proposal_dana.csv</dataSourceUrl>
+   <driver>CSV</driver>
+   <isInternalPath>true</isInternalPath>
+   <query></query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName></sheetName>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>

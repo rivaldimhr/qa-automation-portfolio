@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-13. Dashboard PJ menampilkan Perlu perhatian (2): Klinik Desa Sukamaju (dana 83% vs progres 66%) dan Sekolah Luar Biasa Papua (laporan terakhir 45 hari lalu).</description>
+   <name>KH-30 Peringatan awal di dashboard</name>
+   <tag>smoke, peringatan</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ffc20923-4137-54f9-8c44-3f66b98479db</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-13. Teknik: BVA. Cafe (anggaran Rp 500 juta, progres 63%): terpakai Rp 385 juta = selisih 14 poin, tanpa peringatan; Rp 390 juta = 15 poin, muncul peringatan.</description>
+   <name>KH-31 Batas selisih dana dan progres</name>
+   <tag>peringatan, bva</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>cd160a06-0349-5053-af7d-8528e977e23b</testCaseGuid>
+</TestCaseEntity>

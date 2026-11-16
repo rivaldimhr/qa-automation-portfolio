@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-8. Teknik: EP. Email '  DEMO@KingsHand.id ' tetap diterima sebagai akun penanggung jawab.</description>
+   <name>KH-03 Email tidak peka huruf besar dan spasi</name>
+   <tag>login</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e5807f8e-b901-5eb9-810a-a84c507d4f88</testCaseGuid>
+</TestCaseEntity>

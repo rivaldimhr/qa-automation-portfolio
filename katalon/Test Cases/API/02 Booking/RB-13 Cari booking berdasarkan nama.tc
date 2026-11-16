@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-16. GET /booking?firstname=...&amp;lastname=... dengan nama unik mengembalikan tepat satu bookingid, milik booking yang baru dibuat.</description>
+   <name>RB-13 Cari booking berdasarkan nama</name>
+   <tag>api, crud</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>20c8fb87-34e0-52cd-b86a-820b4f982f08</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-15. POST /auth dengan admin/password123 menjawab 200 dan token 15 karakter heksadesimal.</description>
+   <name>RB-02 Login admin mendapat token</name>
+   <tag>smoke, api, auth</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8d8e5dc6-e82e-59e5-bd2e-9a781c4c7dff</testCaseGuid>
+</TestCaseEntity>

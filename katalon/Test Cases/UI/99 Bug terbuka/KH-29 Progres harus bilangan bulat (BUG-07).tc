@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Bug terbuka BUG-07 (SCRUM-29). Test ini menulis perilaku yang BENAR, jadi GAGAL selama bug belum diperbaiki. Progres 63.5 seharusnya ditolak.</description>
+   <name>KH-29 Progres harus bilangan bulat (BUG-07)</name>
+   <tag>known-bug, BUG-07, laporan, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>dc93369b-743f-5478-92ca-45b93bd4c64b</testCaseGuid>
+</TestCaseEntity>

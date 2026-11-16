@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-9. Teknik: EP. Setiap kolom wajib dikosongkan satu per satu; proposal ditolak dengan pesan yang sama.</description>
+   <name>KH-11 Semua kolom proposal wajib diisi</name>
+   <tag>proposal, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a94fa945-2f99-5799-8bda-3a20c927d21b</testCaseGuid>
+</TestCaseEntity>

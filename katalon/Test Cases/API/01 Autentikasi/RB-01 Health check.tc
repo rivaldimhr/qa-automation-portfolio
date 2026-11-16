@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-15. GET /ping menjawab 201 Created.</description>
+   <name>RB-01 Health check</name>
+   <tag>smoke, api</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1d30e8a0-badc-53eb-9d3f-d5f22a8ee686</testCaseGuid>
+</TestCaseEntity>

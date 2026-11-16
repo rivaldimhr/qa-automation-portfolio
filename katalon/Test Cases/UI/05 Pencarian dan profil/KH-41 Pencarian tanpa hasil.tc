@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-14. Teknik: negative. Kata 'zzz' menampilkan pesan 'Tidak ada proyek yang cocok.'</description>
+   <name>KH-41 Pencarian tanpa hasil</name>
+   <tag>pencarian, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2b292862-1fef-57e4-8d14-1e3f796a1346</testCaseGuid>
+</TestCaseEntity>

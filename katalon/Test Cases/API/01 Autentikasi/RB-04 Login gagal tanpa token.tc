@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-15. Teknik: EP, negative. Kata sandi salah, user salah, dan kosong dijawab {&quot;reason&quot;: &quot;Bad credentials&quot;} tanpa token.</description>
+   <name>RB-04 Login gagal tanpa token</name>
+   <tag>api, auth, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>84a338d8-3164-5a00-ba3f-92f8fdadd82c</testCaseGuid>
+</TestCaseEntity>

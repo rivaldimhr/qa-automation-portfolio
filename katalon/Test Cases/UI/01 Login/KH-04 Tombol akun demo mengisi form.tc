@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-8. Klik akun demo Admin lembaga; email dan kata sandi admin terisi otomatis.</description>
+   <name>KH-04 Tombol akun demo mengisi form</name>
+   <tag>login</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b4e12696-11d2-5a37-941f-839e882c2e0f</testCaseGuid>
+</TestCaseEntity>

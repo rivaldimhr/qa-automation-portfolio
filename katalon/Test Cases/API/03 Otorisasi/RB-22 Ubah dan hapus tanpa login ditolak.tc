@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-17. Teknik: negative. PUT, PATCH, dan DELETE tanpa token maupun Basic auth menjawab 403, dan data tidak berubah.</description>
+   <name>RB-22 Ubah dan hapus tanpa login ditolak</name>
+   <tag>api, auth, negative, security</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e33f5441-1368-58a1-93fd-3441efe13755</testCaseGuid>
+</TestCaseEntity>

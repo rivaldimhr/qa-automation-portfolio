@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-16. PATCH /booking/{id} dengan additionalneeds saja: hanya kolom itu yang berubah.</description>
+   <name>RB-21 Ubah sebagian dengan PATCH</name>
+   <tag>api, crud</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>18470204-7436-5f33-a5b7-8649566be881</testCaseGuid>
+</TestCaseEntity>

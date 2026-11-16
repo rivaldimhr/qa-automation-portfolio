@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-16. DELETE /booking/{id} dengan token berhasil (2xx), lalu GET booking itu menjawab 404.</description>
+   <name>RB-24 Hapus booking</name>
+   <tag>smoke, api, crud</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a8d29d1c-8a44-54cd-a451-5819c1ec3084</testCaseGuid>
+</TestCaseEntity>

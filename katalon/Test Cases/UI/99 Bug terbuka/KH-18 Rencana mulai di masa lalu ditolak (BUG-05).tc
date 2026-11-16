@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Bug terbuka BUG-05 (SCRUM-27). Test ini menulis perilaku yang BENAR, jadi GAGAL selama bug belum diperbaiki. Proposal dengan rencana mulai 2 tahun lalu seharusnya ditolak.</description>
+   <name>KH-18 Rencana mulai di masa lalu ditolak (BUG-05)</name>
+   <tag>known-bug, BUG-05, proposal, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>18206901-90f4-531f-a7fd-2cd69d8416dc</testCaseGuid>
+</TestCaseEntity>

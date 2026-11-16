@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Bug terbuka BUG-10 (SCRUM-32). Test ini menulis perilaku yang BENAR, jadi GAGAL selama bug belum diperbaiki. POST /booking tanpa firstname seharusnya 400, bukan 500.</description>
+   <name>RB-31 Data booking tidak lengkap menjawab 400 (BUG-10)</name>
+   <tag>known-bug, BUG-10, api, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e546c722-4cc3-55dd-8296-d4a999b8cf61</testCaseGuid>
+</TestCaseEntity>

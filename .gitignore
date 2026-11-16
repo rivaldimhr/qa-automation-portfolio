@@ -3,3 +3,14 @@ __pycache__/
 reports/
 sut/
 node_modules/
+
+# Katalon Studio: file buatan Katalon saat project dibuka atau dijalankan
+katalon/Libs/
+katalon/bin/
+katalon/Reports/
+katalon/.cache/
+katalon/.classpath
+katalon/.project
+katalon/.settings/
+katalon/settings/internal/
+katalon/*.log

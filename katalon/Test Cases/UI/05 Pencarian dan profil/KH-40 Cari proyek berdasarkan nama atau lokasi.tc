@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-14. Teknik: EP. 'cafe', 'BANDUNG', dan 'garut' menampilkan daftar proyek yang tepat, tidak peka huruf besar.</description>
+   <name>KH-40 Cari proyek berdasarkan nama atau lokasi</name>
+   <tag>pencarian</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>27dfb3c2-33c3-5c6f-84a3-32d80097ec0c</testCaseGuid>
+</TestCaseEntity>

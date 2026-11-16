@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-16. Teknik: EP. GET dengan Accept: text/plain menjawab 418.</description>
+   <name>RB-15 Format respons yang tidak didukung</name>
+   <tag>api, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3df99e09-6568-5559-b0b0-7eb7e770d1a5</testCaseGuid>
+</TestCaseEntity>

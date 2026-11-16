@@ -1,0 +1,73 @@
+# Project Katalon (folder katalon/) dijalankan dengan Katalon Runtime Engine (KRE) di Docker:
+#   1. KINGSHANDs disajikan lokal di port 8000, Restful-Booker (versi dikunci) di port 3001
+#   2. Test Suite Collection "Regression Lengkap" (UI + API) dengan profil "local", Chrome headless
+#   3. Suite "Known Bugs" dijalankan terpisah dan BOLEH gagal: isinya bug yang masih terbuka
+#   4. Folder Reports Katalon (HTML, JUnit, screenshot) diunggah sebagai artifact
+#
+# KRE butuh API key akun Katalon. Simpan sebagai secret repository KATALON_API_KEY
+# (Settings > Secrets and variables > Actions). Tanpa secret, workflow hanya memberi catatan dan selesai.
+name: Katalon
+
+on:
+  push:
+    branches: [main]
+    paths: ["katalon/**", ".github/workflows/katalon.yml"]
+  workflow_dispatch:
+
+env:
+  RESTFUL_BOOKER_SHA: 619d03162c050baae7d22fdcf983a22f9da6faed
+
+jobs:
+  katalon:
+    runs-on: ubuntu-latest
+    env:
+      KATALON_API_KEY: ${{ secrets.KATALON_API_KEY }}
+    steps:
+      - name: Periksa API key Katalon
+        id: key
+        run: |
+          if [ -z "$KATALON_API_KEY" ]; then
+            echo "::notice::Secret KATALON_API_KEY belum diisi, Katalon Runtime Engine dilewati. Lihat katalon/README.md."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.key.outputs.ok == 'true'
+
+      - name: Ambil aplikasi yang diuji
+        if: steps.key.outputs.ok == 'true'
+        run: |
+          git clone -q https://github.com/rivaldimhr/KINGSHANDs sut/KINGSHANDs
+          git clone -q https://github.com/mwinteringham/restful-booker sut/restful-booker
+          git -C sut/restful-booker checkout -q "$RESTFUL_BOOKER_SHA"
+
+      - uses: actions/setup-node@v4
+        if: steps.key.outputs.ok == 'true'
+        with:
+          node-version: "24"
+
+      - name: Jalankan KINGSHANDs dan Restful-Booker
+        if: steps.key.outputs.ok == 'true'
+        run: |
+          (cd sut/KINGSHANDs/web && nohup python3 -m http.server 8000 > /tmp/web.log 2>&1 &)
+          (cd sut/restful-booker && npm ci --silent && nohup npm start > /tmp/restful-booker.log 2>&1 &)
+          for i in $(seq 1 30); do curl -sf -o /dev/null http://localhost:3001/ping && break || sleep 1; done
+          curl -s -o /dev/null -w "KINGSHANDs: %{http_code}\n" http://localhost:8000/
+          curl -s -o /dev/null -w "Restful-Booker ping: %{http_code}\n" http://localhost:3001/ping
+
+      - name: Regression Lengkap (UI + API)
+        if: steps.key.outputs.ok == 'true'
+        run: scripts/run-katalon.sh "-testSuiteCollectionPath=Test Suites/Regression Lengkap"
+
+      - name: Known Bugs (diharapkan gagal)
+        if: always() && steps.key.outputs.ok == 'true'
+        continue-on-error: true
+        run: scripts/run-katalon.sh "-testSuitePath=Test Suites/Known Bugs"
+
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.key.outputs.ok == 'true'
+        with:
+          name: katalon-reports
+          path: katalon/Reports

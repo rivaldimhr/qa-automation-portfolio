@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-11. Teknik: EP, BVA. Data-driven dari Data Files/KINGSHANDs/laporan_progres_tidak_valid: tanpa file, kosong, 101, -1, dan 62 (di bawah progres 63%) ditolak dengan pesan yang tepat.</description>
+   <name>KH-21 Validasi laporan progres</name>
+   <tag>laporan, bva, negative, data-driven</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f79a886d-63b4-516e-9d4d-5c7b99d627e9</testCaseGuid>
+</TestCaseEntity>

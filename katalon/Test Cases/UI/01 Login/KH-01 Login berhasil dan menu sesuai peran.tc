@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-8. Teknik: EP. Login sebagai penanggung jawab dan admin; sapaan dan menu utama harus sesuai peran.</description>
+   <name>KH-01 Login berhasil dan menu sesuai peran</name>
+   <tag>smoke, login</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bbea0fd8-2b79-5810-bbc0-b6818e135d60</testCaseGuid>
+</TestCaseEntity>

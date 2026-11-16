@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Bug terbuka BUG-09 (SCRUM-31). Test ini menulis perilaku yang BENAR, jadi GAGAL selama bug belum diperbaiki. Login dengan kata sandi salah seharusnya 401, bukan 200.</description>
+   <name>RB-05 Login gagal menjawab 401 (BUG-09)</name>
+   <tag>known-bug, BUG-09, api, auth</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3703205a-2f64-56b9-af27-b98dab893628</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-14. Teknik: state transition. Admin punya 2 notifikasi belum dibaca; setelah panel dibuka penandanya hilang, juga setelah halaman dimuat ulang.</description>
+   <name>KH-46 Notifikasi ditandai dibaca</name>
+   <tag>notifikasi, state-transition</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c452bcf9-0fa2-5b70-8409-3cde8231211f</testCaseGuid>
+</TestCaseEntity>

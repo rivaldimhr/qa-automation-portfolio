@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Regresi BUG-03 (SCRUM-25, sudah diperbaiki). Teknik: BVA. Bank Sampah (anggaran Rp 120 juta) progres 100%: terpakai 120 juta tanpa peringatan; 121 dan 130 juta harus muncul 'Dana terpakai melebihi anggaran'.</description>
+   <name>KH-34 Dana melebihi anggaran (regresi BUG-03)</name>
+   <tag>peringatan, bva, regression, BUG-03</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b3d35ce5-2feb-525e-b1a0-135ca0f254ee</testCaseGuid>
+</TestCaseEntity>

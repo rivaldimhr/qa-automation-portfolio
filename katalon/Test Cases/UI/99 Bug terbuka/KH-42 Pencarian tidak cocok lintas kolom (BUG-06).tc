@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Bug terbuka BUG-06 (SCRUM-28). Test ini menulis perilaku yang BENAR, jadi GAGAL selama bug belum diperbaiki. 'cikutracikutra' (akhir nama + awal lokasi) seharusnya tanpa hasil.</description>
+   <name>KH-42 Pencarian tidak cocok lintas kolom (BUG-06)</name>
+   <tag>known-bug, BUG-06, pencarian, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>dc4fb4cb-3b82-5954-ba1d-46647aaed16f</testCaseGuid>
+</TestCaseEntity>

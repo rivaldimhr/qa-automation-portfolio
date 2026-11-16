@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-11. Teknik: E2E. PJ melaporkan progres 70% untuk Cafe; progres berubah, status Menunggu diperiksa, admin melihat Progres 70%.</description>
+   <name>KH-20 Laporan progres sampai ke admin</name>
+   <tag>smoke, laporan, e2e</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>144dd96c-7991-5892-a236-657cfd979d31</testCaseGuid>
+</TestCaseEntity>

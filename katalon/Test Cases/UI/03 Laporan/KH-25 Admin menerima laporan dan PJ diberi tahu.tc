@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-12. Teknik: state transition. Admin menerima laporan Progres-Unit-Pilah.pdf: laporan pindah ke Sudah diperiksa dan PJ mendapat notifikasi.</description>
+   <name>KH-25 Admin menerima laporan dan PJ diberi tahu</name>
+   <tag>laporan, state-transition, e2e</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4b598542-2ea4-5b2a-b0ad-1501df5e7883</testCaseGuid>
+</TestCaseEntity>

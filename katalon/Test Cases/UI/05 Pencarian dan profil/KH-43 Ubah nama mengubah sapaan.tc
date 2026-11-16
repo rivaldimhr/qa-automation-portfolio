@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-14. Nama profil diubah menjadi Rina Sari; dashboard menyapa 'Halo, Rina'.</description>
+   <name>KH-43 Ubah nama mengubah sapaan</name>
+   <tag>profil</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>cff25590-0178-5468-899d-352429b2896b</testCaseGuid>
+</TestCaseEntity>

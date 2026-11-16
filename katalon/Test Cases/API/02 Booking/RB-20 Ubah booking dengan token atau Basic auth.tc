@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-16. Teknik: EP. PUT /booking/{id} berhasil (200) dengan cookie token maupun header Authorization Basic, dan data terganti.</description>
+   <name>RB-20 Ubah booking dengan token atau Basic auth</name>
+   <tag>api, crud, auth</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b3909e45-67b2-5ce7-a6ab-9e2f810eb176</testCaseGuid>
+</TestCaseEntity>

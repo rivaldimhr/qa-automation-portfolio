@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebServiceRequestEntity>
+   <description>Baca satu booking.</description>
+   <name>GET_Booking</name>
+   <tag></tag>
+   <elementGuidId>6e048ba8-6bc3-5fb1-a79a-abe6e5d1f3d1</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
+   <connectionTimeout>-1</connectionTimeout>
+   <followRedirects>false</followRedirects>
+   <httpBody></httpBody>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Accept</name>
+      <type>Main</type>
+      <value>${accept}</value>
+      <webElementGuid>0a1adf34-c4ac-55c6-a6e9-fc50e5df3d0f</webElementGuid>
+   </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
+   <migratedVersion>5.4.1</migratedVersion>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${baseUrl}/booking/${id}</restUrl>
+   <serviceType>RESTful</serviceType>
+   <soapBody></soapBody>
+   <soapHeader></soapHeader>
+   <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
+   <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>GlobalVariable.RB_URL</defaultValue>
+      <description>Alamat Restful-Booker (dari profil)</description>
+      <id>f88df9c6-774b-5362-9973-b182f5365dda</id>
+      <masked>false</masked>
+      <name>baseUrl</name>
+   </variables>
+   <variables>
+      <defaultValue>'1'</defaultValue>
+      <description>bookingid</description>
+      <id>6d30082d-a22d-556e-be9b-9d64cfd7d556</id>
+      <masked>false</masked>
+      <name>id</name>
+   </variables>
+   <variables>
+      <defaultValue>'application/json'</defaultValue>
+      <description>Header Accept, misalnya application/json, application/xml, text/plain</description>
+      <id>f5a93bef-520e-5450-9b12-98da6a8e1fef</id>
+      <masked>false</masked>
+      <name>accept</name>
+   </variables>
+   <wsdlAddress></wsdlAddress>
+</WebServiceRequestEntity>

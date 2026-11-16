@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-12. Teknik: state transition, negative. Minta revisi tanpa catatan ditolak; dengan catatan, PJ melihat peringatan revisi beserta catatannya.</description>
+   <name>KH-26 Minta revisi wajib catatan dan muncul di PJ</name>
+   <tag>laporan, state-transition, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6076fae0-9d62-557d-921c-2969d7590339</testCaseGuid>
+</TestCaseEntity>

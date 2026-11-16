@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-17. Teknik: negative. DELETE dengan token 15 nol menjawab 403 dan booking tetap ada.</description>
+   <name>RB-23 Token palsu ditolak</name>
+   <tag>api, auth, negative, security</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b73060ec-8e7c-5b6a-9713-8af52f2a84ad</testCaseGuid>
+</TestCaseEntity>

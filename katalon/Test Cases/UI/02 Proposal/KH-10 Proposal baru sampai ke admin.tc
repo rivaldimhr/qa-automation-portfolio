@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-9. Teknik: E2E antarperan. PJ mengajukan proposal Rp 75 juta dengan lampiran PDF; admin melihat dana dan lampirannya.</description>
+   <name>KH-10 Proposal baru sampai ke admin</name>
+   <tag>smoke, proposal, e2e</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>01a28f9b-0e97-5c1e-9daf-ec238c1e6bba</testCaseGuid>
+</TestCaseEntity>

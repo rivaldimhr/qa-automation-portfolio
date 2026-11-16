@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-10. Teknik: state transition, negative. Tolak tanpa alasan ditolak; dengan alasan, PJ melihat status Ditolak beserta alasannya dan proyek hilang dari daftar.</description>
+   <name>KH-16 Penolakan proposal wajib alasan</name>
+   <tag>proposal, state-transition, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0840dc62-05f3-538d-b482-4b7d69f50f7e</testCaseGuid>
+</TestCaseEntity>

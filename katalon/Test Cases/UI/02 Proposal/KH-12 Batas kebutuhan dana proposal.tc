@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-9. Teknik: boundary value analysis. Data-driven dari Data Files/KINGSHANDs/proposal_dana: 0, -5, kosong ditolak; 1 dan 1500 diterima.</description>
+   <name>KH-12 Batas kebutuhan dana proposal</name>
+   <tag>proposal, bva, data-driven</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>380d4278-cced-5737-9df3-97dbc5591864</testCaseGuid>
+</TestCaseEntity>

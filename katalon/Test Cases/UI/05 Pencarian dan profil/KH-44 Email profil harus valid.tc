@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-14. Teknik: EP, negative. 'bukan-email', 'a@', '@kingshand.id', dan kosong ditolak.</description>
+   <name>KH-44 Email profil harus valid</name>
+   <tag>profil, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>38c710af-b11a-56ca-a476-11e30ca14fc5</testCaseGuid>
+</TestCaseEntity>

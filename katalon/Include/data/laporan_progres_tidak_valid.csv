@@ -1,0 +1,6 @@
+nilai,file,pesan
+70,,Pilih file laporan dulu.
+,a.pdf,Isi progres antara 0 dan 100.
+101,a.pdf,Isi progres antara 0 dan 100.
+-1,a.pdf,Isi progres antara 0 dan 100.
+62,a.pdf,Progres tidak boleh turun dari 63%.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Bug terbuka BUG-08 (SCRUM-30). Test ini menulis perilaku yang BENAR, jadi GAGAL selama bug belum diperbaiki. Telepon 'bukan nomor' seharusnya ditolak.</description>
+   <name>KH-45 Telepon profil hanya angka (BUG-08)</name>
+   <tag>known-bug, BUG-08, profil, negative</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>83412987-1532-5f07-b503-f29160045777</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-8. Teknik: state transition. Setelah keluar, form login tampil, juga setelah halaman dimuat ulang.</description>
+   <name>KH-06 Keluar menutup aplikasi</name>
+   <tag>login, state-transition</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b8341e06-a312-5f16-9a6d-1292c4eaed64</testCaseGuid>
+</TestCaseEntity>

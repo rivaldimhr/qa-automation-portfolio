@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-16. POST /booking menjawab 200 dengan bookingid dan data yang sama dengan yang dikirim; bentuk data sesuai skema; GET /booking/{id} mengembalikan data yang sama.</description>
+   <name>RB-10 Buat booking lalu baca kembali</name>
+   <tag>smoke, api, crud</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>53ee51ec-6d60-5080-8d32-97635afe15b5</testCaseGuid>
+</TestCaseEntity>

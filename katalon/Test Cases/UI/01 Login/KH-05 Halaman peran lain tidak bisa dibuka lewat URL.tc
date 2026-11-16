@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-8. Teknik: negative. Admin membuka #proposal dan #profile, PJ membuka #review dan #reports lewat URL; semuanya dialihkan ke Dashboard.</description>
+   <name>KH-05 Halaman peran lain tidak bisa dibuka lewat URL</name>
+   <tag>login, negative, security</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>adc33824-e53d-5b69-ab4a-ec8ca57b755d</testCaseGuid>
+</TestCaseEntity>

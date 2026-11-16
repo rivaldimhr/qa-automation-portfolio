@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Regresi BUG-01 (SCRUM-23, High, sudah diperbaiki). PJ salah melaporkan 95%, admin meminta revisi, PJ mengoreksi ke 70%: koreksi diterima dan 70% menjadi batas bawah laporan berikutnya.</description>
+   <name>KH-27 Progres bisa dikoreksi setelah revisi (regresi BUG-01)</name>
+   <tag>laporan, regression, BUG-01</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e8e0acc1-5a9b-5366-b7aa-ce941085ad13</testCaseGuid>
+</TestCaseEntity>

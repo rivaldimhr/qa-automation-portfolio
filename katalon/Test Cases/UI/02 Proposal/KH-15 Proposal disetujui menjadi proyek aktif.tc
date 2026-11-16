@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Story SCRUM-10. Teknik: state transition, E2E. Admin menyetujui dengan catatan: penghitung berkurang, PJ mendapat notifikasi berisi catatan, proyek muncul di filter Aktif.</description>
+   <name>KH-15 Proposal disetujui menjadi proyek aktif</name>
+   <tag>smoke, proposal, state-transition, e2e</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e929c7a7-bf2a-5f23-9f81-29d1d0fc4988</testCaseGuid>
+</TestCaseEntity>

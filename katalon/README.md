@@ -9,6 +9,7 @@ Pengujian yang sama dengan bagian Playwright/pytest dan Postman di repo ini, dib
 | Bug terbuka | 6 test di suite **Known Bugs** (BUG-05, 06, 07, 08, 09, 10), sengaja gagal sampai bugnya diperbaiki |
 | Object Repository | 61 objek web (sebagian berparameter `${...}`) dan 8 objek web service |
 | Data-driven | 3 Data File CSV: login gagal, batas dana proposal, validasi laporan progres |
+| Hasil di Katalon Studio 11.7 (Chrome 157, Windows 11, profil `default`) | Regression API 12/12 lulus, Regression UI 24/24 lulus, Known Bugs 6/6 gagal sesuai dugaan |
 
 ## Membuka dan menjalankan
 

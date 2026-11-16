@@ -58,7 +58,8 @@ class KH {
 	@Keyword
 	def openApp() {
 		WebUI.openBrowser('')
-		WebUI.setViewPortSize(1366, 900)
+		// jendela mengikuti layar; ukuran viewport tetap yang lebih besar dari layar membuat Katalon menunggu elemen terlalu lama
+		WebUI.maximizeWindow()
 		WebUI.navigateToUrl(GlobalVariable.BASE_URL as String)
 		WebUI.executeJavaScript('localStorage.clear(); sessionStorage.clear();', null)
 		WebUI.refresh()

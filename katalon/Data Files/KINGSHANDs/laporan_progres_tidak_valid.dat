@@ -4,7 +4,7 @@
    <name>laporan_progres_tidak_valid</name>
    <tag></tag>
    <containsHeaders>true</containsHeaders>
-   <csvSeperator>,</csvSeperator>
+   <csvSeperator>COMMA</csvSeperator>
    <dataFile>99fa5c4e-9a3a-5f22-af1e-c3a1be76f6f9</dataFile>
    <dataSourceUrl>Include/data/laporan_progres_tidak_valid.csv</dataSourceUrl>
    <driver>CSV</driver>

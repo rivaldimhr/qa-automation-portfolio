@@ -4,7 +4,7 @@
    <name>proposal_dana</name>
    <tag></tag>
    <containsHeaders>true</containsHeaders>
-   <csvSeperator>,</csvSeperator>
+   <csvSeperator>COMMA</csvSeperator>
    <dataFile>c7f46f09-a544-5557-b796-9b3f633bc99a</dataFile>
    <dataSourceUrl>Include/data/proposal_dana.csv</dataSourceUrl>
    <driver>CSV</driver>

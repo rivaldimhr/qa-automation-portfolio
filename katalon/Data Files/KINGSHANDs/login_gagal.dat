@@ -4,7 +4,7 @@
    <name>login_gagal</name>
    <tag></tag>
    <containsHeaders>true</containsHeaders>
-   <csvSeperator>,</csvSeperator>
+   <csvSeperator>COMMA</csvSeperator>
    <dataFile>596a103b-6333-52c4-b1e2-a71d46094e62</dataFile>
    <dataSourceUrl>Include/data/login_gagal.csv</dataSourceUrl>
    <driver>CSV</driver>

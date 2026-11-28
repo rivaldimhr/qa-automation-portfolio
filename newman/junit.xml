@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Restful-Booker: smoke &amp; negative" tests="14" time="0.046">
+  <testsuite name="1. Smoke / Ping" id="f499a4f5-c07f-46a7-a16b-8f944d53d1a2" timestamp="2026-11-28T04:41:15.410Z" tests="2" failures="0" errors="0" time="0.025">
+    <testcase name="Respons di bawah 3 detik" time="0.025" classname="1SmokePing"/>
+    <testcase name="Status 201" time="0.025" classname="1SmokePing"/>
+  </testsuite>
+  <testsuite name="1. Smoke / Login admin" id="3d93ee55-95d4-484e-9e79-5a02db677fd2" timestamp="2026-11-28T04:41:15.410Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Respons di bawah 3 detik" time="0.003" classname="1SmokeLoginAdmin"/>
+    <testcase name="Status 200" time="0.003" classname="1SmokeLoginAdmin"/>
+    <testcase name="Token 15 karakter heksadesimal" time="0.003" classname="1SmokeLoginAdmin"/>
+  </testsuite>
+  <testsuite name="1. Smoke / Buat booking" id="06605174-2b92-4b2e-9ed0-8be4e22bcf00" timestamp="2026-11-28T04:41:15.410Z" tests="5" failures="0" errors="0" time="0.002">
+    <testcase name="Respons di bawah 3 detik" time="0.002" classname="1SmokeBuatBooking"/>
+    <testcase name="Status 200" time="0.002" classname="1SmokeBuatBooking"/>
+    <testcase name="Ada bookingid" time="0.002" classname="1SmokeBuatBooking"/>
+    <testcase name="Data tersimpan sesuai yang dikirim" time="0.002" classname="1SmokeBuatBooking"/>
+    <testcase name="Skema respons" time="0.002" classname="1SmokeBuatBooking"/>
+  </testsuite>
+  <testsuite name="1. Smoke / Baca booking" id="51b88562-9329-45f1-8075-6e005a0b5569" timestamp="2026-11-28T04:41:15.410Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Respons di bawah 3 detik" time="0.002" classname="1SmokeBacaBooking"/>
+    <testcase name="Status 200" time="0.002" classname="1SmokeBacaBooking"/>
+    <testcase name="Nama sesuai" time="0.002" classname="1SmokeBacaBooking"/>
+  </testsuite>
+  <testsuite name="1. Smoke / Cari booking berdasarkan nama" id="117b79c0-7a1f-4072-af7b-d9d3f177e07c" timestamp="2026-11-28T04:41:15.410Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Respons di bawah 3 detik" time="0.002" classname="1SmokeCariBookingBerdasarkanNama"/>
+    <testcase name="Status 200" time="0.002" classname="1SmokeCariBookingBerdasarkanNama"/>
+    <testcase name="Booking yang dibuat ditemukan" time="0.002" classname="1SmokeCariBookingBerdasarkanNama"/>
+  </testsuite>
+  <testsuite name="1. Smoke / Ubah booking (token)" id="cf363d7a-ef73-4d4a-9033-8a92334c47d0" timestamp="2026-11-28T04:41:15.410Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Respons di bawah 3 detik" time="0.002" classname="1SmokeUbahBookingToken"/>
+    <testcase name="Status 200" time="0.002" classname="1SmokeUbahBookingToken"/>
+    <testcase name="Nilai berubah" time="0.002" classname="1SmokeUbahBookingToken"/>
+  </testsuite>
+  <testsuite name="1. Smoke / Ubah sebagian (basic auth)" id="2ebb3e71-2599-456c-9f58-3fcb6e537d93" timestamp="2026-11-28T04:41:15.410Z" tests="3" failures="0" errors="0" time="0.001">
+    <testcase name="Respons di bawah 3 detik" time="0.001" classname="1SmokeUbahSebagianBasicAuth"/>
+    <testcase name="Status 200" time="0.001" classname="1SmokeUbahSebagianBasicAuth"/>
+    <testcase name="Hanya additionalneeds yang berubah" time="0.001" classname="1SmokeUbahSebagianBasicAuth"/>
+  </testsuite>
+  <testsuite name="1. Smoke / Hapus booking" id="e14b5cfd-0f98-4e52-b114-852249432025" timestamp="2026-11-28T04:41:15.410Z" tests="2" failures="0" errors="0" time="0.002">
+    <testcase name="Respons di bawah 3 detik" time="0.002" classname="1SmokeHapusBooking"/>
+    <testcase name="Booking terhapus (201, lihat BUG-13)" time="0.002" classname="1SmokeHapusBooking"/>
+  </testsuite>
+  <testsuite name="1. Smoke / Baca booking yang sudah dihapus" id="90268a38-cee1-4bac-8f84-25f2f030e34a" timestamp="2026-11-28T04:41:15.410Z" tests="2" failures="0" errors="0" time="0.002">
+    <testcase name="Respons di bawah 3 detik" time="0.002" classname="1SmokeBacaBookingYangSudahDihapus"/>
+    <testcase name="Status 404" time="0.002" classname="1SmokeBacaBookingYangSudahDihapus"/>
+  </testsuite>
+  <testsuite name="2. Negative / [BUG-09] Login dengan kata sandi salah" id="d4d1a9bc-4e44-44f5-ab84-6ce37289cf8f" timestamp="2026-11-28T04:41:15.410Z" tests="4" failures="0" errors="0" time="0.001">
+    <testcase name="Respons di bawah 3 detik" time="0.001" classname="2NegativeBug09LoginDenganKataSandiSalah"/>
+    <testcase name="Tidak memberi token" time="0.001" classname="2NegativeBug09LoginDenganKataSandiSalah"/>
+    <testcase name="Alasan: Bad credentials" time="0.001" classname="2NegativeBug09LoginDenganKataSandiSalah"/>
+    <testcase name="Status saat ini 200 (lihat BUG-09)" time="0.001" classname="2NegativeBug09LoginDenganKataSandiSalah"/>
+  </testsuite>
+  <testsuite name="2. Negative / Ubah tanpa login" id="685f4c6c-3892-45af-b60f-b73e3e274546" timestamp="2026-11-28T04:41:15.410Z" tests="2" failures="0" errors="0" time="0.001">
+    <testcase name="Respons di bawah 3 detik" time="0.001" classname="2NegativeUbahTanpaLogin"/>
+    <testcase name="Status 403" time="0.001" classname="2NegativeUbahTanpaLogin"/>
+  </testsuite>
+  <testsuite name="2. Negative / Hapus dengan token palsu" id="bdaee3cc-a960-4a75-a214-c4796ea6f3b7" timestamp="2026-11-28T04:41:15.410Z" tests="2" failures="0" errors="0" time="0.001">
+    <testcase name="Respons di bawah 3 detik" time="0.001" classname="2NegativeHapusDenganTokenPalsu"/>
+    <testcase name="Status 403" time="0.001" classname="2NegativeHapusDenganTokenPalsu"/>
+  </testsuite>
+  <testsuite name="2. Negative / [BUG-10] Buat booking tanpa lastname" id="d36f8925-fffa-4812-9620-b66fec5288af" timestamp="2026-11-28T04:41:15.410Z" tests="3" failures="0" errors="0" time="0.001">
+    <testcase name="Respons di bawah 3 detik" time="0.001" classname="2NegativeBug10BuatBookingTanpaLastname"/>
+    <testcase name="Ditolak" time="0.001" classname="2NegativeBug10BuatBookingTanpaLastname"/>
+    <testcase name="Status saat ini 500 (lihat BUG-10)" time="0.001" classname="2NegativeBug10BuatBookingTanpaLastname"/>
+  </testsuite>
+  <testsuite name="2. Negative / Format respons tidak didukung" id="c27e2f07-27ee-4e59-8615-4d43871e472f" timestamp="2026-11-28T04:41:15.410Z" tests="2" failures="0" errors="0" time="0.001">
+    <testcase name="Respons di bawah 3 detik" time="0.001" classname="2NegativeFormatResponsTidakDidukung"/>
+    <testcase name="Status 418 (terdokumentasi)" time="0.001" classname="2NegativeFormatResponsTidakDidukung"/>
+  </testsuite>
+</testsuites>
